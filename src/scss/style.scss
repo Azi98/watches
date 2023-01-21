@@ -1,5 +1,6 @@
-@import 'variables';
-*{
+@import "_variables.scss";
+@import "_mixins.scss";
+* {
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
 .container {

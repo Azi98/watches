@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Магазин пульсометров</title>
 </head>
 <body>
-    <div class="promo">
+    <section class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -59,9 +60,9 @@
             </div>
 
         </div>
-    </div>
+    </section>
 
-    <div class="advantages">
+    <section class="advantages">
         <div class="container">
             <div class="advantages__text">Наши преимущества</div>
 
@@ -89,6 +90,80 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="consultation">
+        <div class="container">
+            <div class="title">Получите бесплатную консультацию<br>по подбору пульсометра</div>
+            <div class="consultation__descr">
+                Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут
+            </div>
+            <form class="feed-form" action="#">
+                <input name="name" required placeholder="Your name" type="text">
+                <input name="phone" required placeholder="Your phone" type="number">
+                <input name="email" required placeholder="Your email" type="email">
+
+                <button class="button button_submit">ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="carousel">
+        <div class="container">
+            <div class="carousel__inner">
+                <div>
+                    <img src="img/slide_1.png" alt="slide">
+                </div>
+                <div>
+                    <img src="img/slide_2.png" alt="slide">
+                </div>
+                <div>
+                    <img src="img/slide_3.png" alt="slide">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <div class="container">
+            <h2 class="title">
+                Каталог пулсометров
+            </h2>
+            <ul class="catalog__tabs">
+                <li class="catalog__tab catalog__tab_active"><div>Для фитнеса</div></li>
+                <li class="catalog__tab"><div>Для бега</div></li>
+                <li class="catalog__tab"><div>Для триатлона</div></li>
+            </ul>
+
+            <div class="catalog__content">
+                <div class="catalog__item">
+                    <div class="catalog__wrapper">
+                        <div class="catalog__m-content">
+                            <img src="img/watch.png" alt="watch" class="catalog__img">
+                            <div class="catalog__subtitle">Пульсометр Polar FT1</div>
+                            <div class="catalog__descr">Для первых шагов в тренировках, основанных на сердечном ритме </div>
+                            <a href="" class="catalog__link">Подробнее</a>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="catalog__footer">
+                        <div class="catalog__prices">
+                            <div class="catalog__old-price">4 750 руб.</div>
+                            <div class="catalog__new-price">4 500 руб.</div>
+                        </div>
+                        <button class="catalog__btn">Купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__content"></div>
+            <div class="catalog__content"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

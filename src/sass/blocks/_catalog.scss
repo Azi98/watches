@@ -40,6 +40,12 @@
     }
     &__content {
         margin-top: 60px;
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &_active {
+            display: flex;
+        }
     }
     &__item {
         width: 303px;
@@ -47,6 +53,8 @@
         border: 2px solid #e8e8e8;
         background-color: #fff;
         padding: 20px 20px 26px 20px;
+        overflow: hidden;   /* Эта штука нам нужнаБ для того чтобы когда какой-то контент вылазил за рамки родителя(нашего __item) - то оно переставало изображаться, это сделано для того, чтобы мы могли менять контент при нажатии на кнопку подробнее.  */ 
+        margin-bottom: 20px;
     }
     &__img {
         display: block;
@@ -78,6 +86,7 @@
         text-align: center;
         text-decoration-line: underline;
         color: #C70101;
+        text-transform: uppercase;
         &:hover {
             color: #C70101; /* чтобы при наведении не менялся цвет */
         }
@@ -117,5 +126,65 @@
         color: #FFFFFF;
         border: none;
         border-radius: 5%;
+    }
+    &__wrapper {
+        display: flex;
+        width: calc(200% + 40px);       /* Удобная штука, чтобы совмещать разные типы введения размера объектов */
+    }
+    &__m-content {
+        width: 50%;
+        margin-right: 0px;
+        transform: translateX(-100%);
+        transition: 0.5s all;
+        &_active {
+            transform: translateX(0%);
+            margin-right: 20px;
+        }
+    }
+    &__list {
+        position: relative;
+        width: 50%;
+        margin-left: 20px;
+        transform: translateX(0%);
+        padding-right: 20px;
+        transition: 0.5s all;
+        padding-left: 19px;
+        margin-bottom: 0;
+        list-style-type: none;
+        &_active {
+            transform: translateX(-100%);
+            margin-left: 0;
+        }
+        li {
+            position: relative;
+            color:#555555;
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background-color: #C70101;
+                left: -14px;
+                top: 7px;
+            }
+        }
+    }
+    &__back {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(calc(-50% - 19px));
+        display: block;
+        color:#C70101;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: underline;
+        text-transform: uppercase;
+        &:hover {
+            color:#C70101
+        }
     }
 }
